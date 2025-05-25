@@ -12,7 +12,7 @@ RUN go mod download
 COPY . .
 
 # Собираем бинарник приложения (main.go в cmd/feed-service)
-RUN go build -o feed-service .
+RUN go build -o feed-service ./cmd/feed-service
 
 # --- Второй этап: минимальный runtime образ ---
 FROM alpine:latest
